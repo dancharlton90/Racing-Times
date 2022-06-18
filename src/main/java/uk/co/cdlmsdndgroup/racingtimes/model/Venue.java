@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @NoArgsConstructor
 @Getter
@@ -17,6 +18,9 @@ public class Venue {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @NotBlank(message = "name field is required")
     private String name;
 
+    @NotBlank(message = "location field is required")
+    private String location;
 }
