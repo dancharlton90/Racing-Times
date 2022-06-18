@@ -21,8 +21,7 @@ public class User {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @NotBlank
-    @NotEmpty
+    @NotBlank(message = "firstName field is required")
     private String firstName;
     private String lastName;
 
