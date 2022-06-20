@@ -3,20 +3,15 @@ package uk.co.cdlmsdndgroup.racingtimes.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import uk.co.cdlmsdndgroup.racingtimes.model.Venue;
 import uk.co.cdlmsdndgroup.racingtimes.service.VenueService;
 
-import javax.persistence.PersistenceException;
-import javax.validation.ConstraintViolationException;
 import javax.validation.Valid;
-import java.sql.SQLIntegrityConstraintViolationException;
 
 @RestController
+@RequestMapping("/api")
 public class VenueApiController {
 
     @Autowired
