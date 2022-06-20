@@ -5,6 +5,9 @@ import org.springframework.stereotype.Service;
 import uk.co.cdlmsdndgroup.racingtimes.model.User;
 import uk.co.cdlmsdndgroup.racingtimes.repository.UserRepository;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -14,5 +17,9 @@ public class UserService {
     // Saves and returns user
     public void addUser(User user) {
         userRepo.save(user);
+    }
+
+    public List<User> getUserList() {
+        return userRepo.findAll();
     }
 }
